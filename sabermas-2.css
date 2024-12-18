@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* font-family: "Bebas Neue", sans-serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #1f1f1f;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.menu{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.logo {
+    font-size: 24px;
+    color: #cf2d3a;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.logo img {
+    width: 8%;
+    margin-top: 5px;
+}
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: hsl(0, 0%, 100%);
+    display: block;
+}
+.menu .navbar ul li a:hover {
+    color: #cf2d3a;
+}
+#menu {
+    display: none;
+}
+.menu-icono {
+    width: 25px;
+}
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.welcome{
+    display: flex;
+}
+.welcome-1 {
+    background-image: url(images/22.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+.welcome-2 {
+    width: 50%;
+    padding: 150px 250px 150px 100px;
+    background-color: #191919;
+}
+h2 {
+    font-size: 90px;
+    line-height: 100px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 16px;
+    color: #afafaf;
+    margin: 25px 0;
+}
+.b1 {
+    color: #cf2d3a;
+}
+.footer-txt {
+    text-align: center;
+    padding: 30px;
+    background-color: #000000;
+}
+
+@media(max-width:991px){
+    .menu {
+        padding: 20px;
+    }
+    .menu label {
+        display: inline;
+    }
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1f1f1f;
+        display: none;
+    }
+    .menu .navbar ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    .welcome {
+        flex-direction: column;
+    }
+    .welcome-1 {
+        display: none;
+    }
+    .welcome-2 {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 70px;
+        line-height: 80px;
+    }
+    p {
+        margin: 15px 0;
+    }
+    .footer {
+        padding: 30px;
+    }
+}
